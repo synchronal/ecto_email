@@ -299,7 +299,7 @@ jobs:
               elixir: 1.16.3
               otp: 26.2.5
     name: Publish to Hex
-    if: false && github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs:
       - test
       - credo_and_dialyxir
