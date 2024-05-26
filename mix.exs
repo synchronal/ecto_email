@@ -2,6 +2,7 @@ defmodule EctoEmail.MixProject do
   use Mix.Project
 
   @scm_url "https://github.com/synchronal/ecto_email"
+  @version "1.0.0"
 
   def application,
     do: [
@@ -31,7 +32,7 @@ defmodule EctoEmail.MixProject do
       package: package(),
       source_url: @scm_url,
       start_permanent: Mix.env() == :prod,
-      version: "1.0.0"
+      version: @version
     ]
 
   # # #
