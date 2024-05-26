@@ -10,7 +10,7 @@ module to provide automatic validation of inputs.
 ``` elixir
 def deps do
   [
-    {:ecto_email, "~> 0.1"}
+    {:ecto_email, "~> 1.0"}
   ]
 end
 ```
