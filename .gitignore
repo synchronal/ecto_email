@@ -1,0 +1,10 @@
+*.ez
+/.fetch
+/_build/
+/cover/
+/deps/
+/doc/
+/tmp/
+Brewfile.lock.json
+ecto_email-*.tar
+erl_crash.dump
