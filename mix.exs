@@ -1,6 +1,8 @@
 defmodule EctoEmail.MixProject do
   use Mix.Project
 
+  @scm_url "https://github.com/synchronal/ecto_email"
+
   def application,
     do: [
       extra_applications: [:logger]
@@ -19,14 +21,17 @@ defmodule EctoEmail.MixProject do
       aliases: aliases(),
       app: :ecto_email,
       deps: deps(),
+      description: "An Ecto.Type for email address fields",
       dialyzer: dialyzer(),
       docs: docs(),
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
-      homepage_url: "https://github.com/synchronal/ecto_email",
-      source_url: "https://github.com/synchronal/ecto_email",
+      homepage_url: @scm_url,
+      name: "Ecto.Email",
+      package: package(),
+      source_url: @scm_url,
       start_permanent: Mix.env() == :prod,
-      version: "0.1.0"
+      version: "1.0.0"
     ]
 
   # # #
@@ -61,9 +66,17 @@ defmodule EctoEmail.MixProject do
   defp docs,
     do: [
       main: "Ecto.Email",
-      extras: ["LICENSE.md"]
+      extras: ["LICENSE.md", "CHANGELOG.md"]
     ]
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
+
+  defp package,
+    do: [
+      files: ~w(lib .formatter.exs mix.exs *.md),
+      licenses: ["MIT"],
+      maintainers: ["synchronal.dev", "Erik Hanson", "Eric Saxby"],
+      links: %{"GitHub" => @scm_url}
+    ]
 end
