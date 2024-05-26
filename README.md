@@ -1,6 +1,9 @@
-# EctoEmail
+# Ecto.Email
 
-TBD
+This library provides an `Ecto.Type` in the guise of `Ecto.Email`. When
+using a database column type interchangeable with `:string` such as
+`:text`, `:string`, or `:citext`, this type may be used in the schema
+module to provide automatic validation of inputs.
 
 ## Installation
 
@@ -11,6 +14,24 @@ def deps do
   ]
 end
 ```
+
+``` elixir
+defmodule Schema.Person do
+  use Ecto.Schema
+  import Ecto.Changeset
+
+  schema "people" do
+    field :email_address, Ecto.Email
+  end
+
+  def changeset(data \\ %__MODULE__{}, attrs) do
+    data
+    |> cast(Map.new(attrs), ~w[email_address]a)
+  end
+end
+```
+
+See the [documentation](https://hexdocs.pm/ecto_email) for more info.
 
 ## Development
 
