@@ -18,17 +18,18 @@ checks = [
 
 [audit]
 checks = [
-  { name = "elixir: check formatting", shell = "mix format --check-formatted" },
-  { step = "elixir", command = "credo" },
-  { step = "elixir", command = "dialyzer"  },
-  { step = "elixir", command = "audit-deps"  },
-  { check = "elixir", command = "unused-deps" },
-  { name = "Check md format", shell = "bin/dev/format-md --check", remedy = "bin/dev/format-md --all" },
+  {name = "elixir: check formatting", shell = "mix format --check-formatted"},
+  {step = "elixir", command = "credo"},
+  {step = "elixir", command = "dialyzer" },
+  {step = "elixir", command = "audit-deps" },
+  {check = "elixir", command = "unused-deps"},
+  {name = "elixir: build docs", shell = "mix docs"},
+  {name = "Check md format", shell = "bin/dev/format-md --check", remedy = "bin/dev/format-md --all"},
 ]
 
 [outdated]
 checks = [
-   {check = "elixir"},
+ {check = "elixir"},
 ]
 
 [update]
@@ -46,6 +47,6 @@ steps = [
   {update = {}},
   {test = {}},
   {step = "git", command = "push" },
-  { step = "github", command = "link-to-actions", verbose = true },
+  {step = "github", command = "link-to-actions", verbose = true},
 ]
 

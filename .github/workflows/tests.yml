@@ -194,6 +194,41 @@ jobs:
       - name: Run dialyzer
         run: mix dialyzer
         working-directory: .
+  docs:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pair:
+              elixir: 1.16.3
+              otp: 26.2.5
+    name: Docs
+    needs: build_dev
+    runs-on: ubuntu-20.04
+    env:
+      MIX_ENV: dev
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Elixir
+        id: beam
+        uses: erlef/setup-beam@v1
+        with:
+          elixir-version: ${{ matrix.pair.elixir }}
+          otp-version: ${{ matrix.pair.otp }}
+          version-type: strict
+      - name: Cache deps
+        uses: actions/cache@v4
+        with:
+          path: deps
+          key: ${{ runner.os }}-dev-deps-v1-${{ hashFiles('**/mix.lock') }}-${{ steps.beam.outputs.otp-version }}-${{ steps.beam.outputs.elixir-version }}
+      - name: Cache _build
+        uses: actions/cache@v4
+        with:
+          path: _build
+          key: ${{ runner.os }}-dev-build-v1-${{ hashFiles('**/mix.lock') }}-${{ steps.beam.outputs.otp-version }}-${{ steps.beam.outputs.elixir-version }}
+      - name: Check docs can build
+        run: mix docs
+        working-directory: .
   audit:
     strategy:
       fail-fast: false
