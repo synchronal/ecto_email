@@ -28,7 +28,7 @@ defmodule EctoEmail.MixProject do
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
       homepage_url: @scm_url,
-      name: "Ecto.Email",
+      name: "EctoEmail",
       package: package(),
       source_url: @scm_url,
       start_permanent: Mix.env() == :prod,
@@ -66,7 +66,7 @@ defmodule EctoEmail.MixProject do
 
   defp docs,
     do: [
-      main: "Ecto.Email",
+      main: "EctoEmail",
       extras: ["LICENSE.md", "CHANGELOG.md"]
     ]
 

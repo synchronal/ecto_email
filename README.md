@@ -1,6 +1,6 @@
-# Ecto.Email
+# EctoEmail
 
-This library provides an `Ecto.Type` in the guise of `Ecto.Email`. When
+This library provides an `Ecto.Type` in the guise of `EctoEmail`. When
 using a database column type interchangeable with `:string` such as
 `:text`, `:string`, or `:citext`, this type may be used in the schema
 module to provide automatic validation of inputs.
@@ -21,7 +21,7 @@ defmodule Schema.Person do
   import Ecto.Changeset
 
   schema "people" do
-    field :email_address, Ecto.Email
+    field :email_address, EctoEmail
   end
 
   def changeset(data \\ %__MODULE__{}, attrs) do

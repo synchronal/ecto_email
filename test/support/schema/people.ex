@@ -3,7 +3,7 @@ defmodule Schema.Person do
   use Ecto.Schema
 
   schema "people" do
-    field(:email_address, Ecto.Email)
+    field(:email_address, EctoEmail)
   end
 
   def changeset(data \\ %__MODULE__{}, attrs) do

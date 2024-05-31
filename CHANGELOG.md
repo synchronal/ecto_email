@@ -1,5 +1,7 @@
 ## Change log
 
+- **Breaking change:** Use `EctoEmail` instead of `Ecto.Email`.
+
 ## 1.0.0
 
 - Initial release.
