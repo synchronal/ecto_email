@@ -87,6 +87,14 @@ defmodule EctoEmailTest do
       assert "AddreSS@example.COM" |> EctoEmail.equal?("address@example.com")
     end
 
+    test "handles unicode in the address part of emails" do
+      assert "😅@example.com" |> EctoEmail.equal?("😅@example.com")
+      assert "😅@example.COM" |> EctoEmail.equal?("😅@example.com")
+      assert "Ä@example.COM" |> EctoEmail.equal?("ä@example.com")
+
+      refute "😅@example.COM" |> EctoEmail.equal?("🥳@example.com")
+    end
+
     test "is false when the addresses are the same" do
       refute "address@example.com" |> EctoEmail.equal?("address2@example.com")
     end
