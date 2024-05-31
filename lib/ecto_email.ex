@@ -106,10 +106,12 @@ defmodule EctoEmail do
   def cast(_), do: {:error, message: "invalid email address"}
 
   @doc """
-  Callback implementation for `c:Ecto.Type.equal?/2`.
+  Callback implementation for `c:Ecto.Type.equal?/2`. When comparing two email addresses
+  differing only in case, the addresses are treated as equal.
 
   ``` elixir
   iex> assert EctoEmail.equal?("a@b.com", "a@b.com")
+  iex> assert EctoEmail.equal?("A@B.com", "a@b.com")
   iex> refute EctoEmail.equal?("a@b.com", "a@c.com")
   ```
   """
