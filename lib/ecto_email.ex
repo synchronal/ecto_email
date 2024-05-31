@@ -115,6 +115,7 @@ defmodule EctoEmail do
   """
   @impl Ecto.Type
   def equal?(address, address) when is_binary(address), do: true
+  def equal?(left, right) when is_binary(left) and is_binary(right), do: String.downcase(left) == String.downcase(right)
   def equal?(_, _), do: false
 
   @doc "Callback implementation for `c:Ecto.Type.load/1`"

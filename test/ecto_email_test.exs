@@ -83,6 +83,10 @@ defmodule EctoEmailTest do
       assert "address@example.com" |> EctoEmail.equal?("address@example.com")
     end
 
+    test "is true when the addresses have the same content but different case" do
+      assert "AddreSS@example.COM" |> EctoEmail.equal?("address@example.com")
+    end
+
     test "is false when the addresses are the same" do
       refute "address@example.com" |> EctoEmail.equal?("address2@example.com")
     end

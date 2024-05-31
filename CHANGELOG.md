@@ -1,5 +1,6 @@
 ## Change log
 
+- Email addresses with different cases are considered equal.
 - **Breaking change:** Use `EctoEmail` instead of `Ecto.Email`.
 
 ## 1.0.0
