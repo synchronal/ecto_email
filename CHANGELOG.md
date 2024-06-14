@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.1.0
+
 - require Elixir 1.15 or greater
 - test against the latest version of Erlang and Elixir
 
