@@ -1,5 +1,10 @@
 ## Change log
 
+## Unreleased
+
+- require Elixir 1.15 or greater
+- test against the latest version of Erlang and Elixir
+
 ## 2.0.0
 
 - Email addresses with different cases are considered equal.

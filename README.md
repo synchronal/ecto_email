@@ -5,6 +5,8 @@ using a database column type interchangeable with `:string` such as
 `:text`, `:string`, or `:citext`, this type may be used in the schema
 module to provide automatic validation of inputs.
 
+This library is tested against the most recent 3 versions of Elixir and Erlang.
+
 ## Installation
 
 ``` elixir
