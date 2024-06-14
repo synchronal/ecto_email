@@ -51,7 +51,7 @@ defmodule EctoEmail.MixProject do
       {:ecto_sql, "~> 3.10"},
       {:ecto_temp, "~> 1.1", only: :test},
       {:email_validator, "~> 1.1"},
-      {:ex_doc, "~> 0.33.0", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.34", only: :dev, runtime: false},
       {:mix_audit, "~> 2.1", only: [:dev, :test], runtime: false},
       {:postgrex, ">= 0.0.0"}
     ]
