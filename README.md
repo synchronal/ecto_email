@@ -13,7 +13,7 @@ Erlang.
 ``` elixir
 def deps do
   [
-    {:ecto_email, "~> 2.1"}
+    {:ecto_email, "~> 1.0"}
   ]
 end
 ```
