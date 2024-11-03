@@ -17,7 +17,7 @@ jobs:
               elixir: 1.15.8
               otp: 25.3.2.12
           - pair:
-              elixir: 1.17.2
+              elixir: 1.17.3
               otp: 27.0
     name: Build Test
     runs-on: ubuntu-22.04
@@ -62,7 +62,7 @@ jobs:
               elixir: 1.15.8
               otp: 25.3.2.12
           - pair:
-              elixir: 1.17.2
+              elixir: 1.17.3
               otp: 27.0
     name: Build Dev
     runs-on: ubuntu-22.04
@@ -107,7 +107,7 @@ jobs:
               elixir: 1.15.8
               otp: 25.3.2.12
           - pair:
-              elixir: 1.17.2
+              elixir: 1.17.3
               otp: 27.0
     name: Test
     needs: build_test
@@ -116,7 +116,7 @@ jobs:
       MIX_ENV: test
     services:
       postgres:
-        image: postgres:16.4-alpine
+        image: postgres:17.0-alpine
         env:
           POSTGRES_PASSWORD: postgres
           POSTGRES_USER: postgres
@@ -159,7 +159,7 @@ jobs:
               elixir: 1.15.8
               otp: 25.3.2.12
           - pair:
-              elixir: 1.17.2
+              elixir: 1.17.3
               otp: 27.0
     name: Credo + Dialyxir
     needs: build_test
@@ -202,7 +202,7 @@ jobs:
       matrix:
         include:
           - pair:
-              elixir: 1.17.2
+              elixir: 1.17.3
               otp: 27.0
     name: Docs
     needs: build_dev
@@ -237,7 +237,7 @@ jobs:
       matrix:
         include:
           - pair:
-              elixir: 1.17.2
+              elixir: 1.17.3
               otp: 27.0
     name: Audit
     needs: build_dev
@@ -284,7 +284,7 @@ jobs:
       matrix:
         include:
           - pair:
-              elixir: 1.17.2
+              elixir: 1.17.3
               otp: 27.0
     name: Publish to Hex
     if: github.ref == 'refs/heads/main'
