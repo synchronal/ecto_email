@@ -25,7 +25,7 @@ defmodule EctoEmail.MixProject do
       description: "An Ecto.Type for email address fields",
       dialyzer: dialyzer(),
       docs: docs(),
-      elixir: "~> 1.15",
+      elixir: "~> 1.16",
       elixirc_paths: elixirc_paths(Mix.env()),
       homepage_url: @scm_url,
       name: "EctoEmail",
