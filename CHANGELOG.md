@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 3.0.1
+
+- Replace `:email_validator` with `ExEmail`.
+
 ## 3.0.0
 
 - Test against Elixir 1.18.
