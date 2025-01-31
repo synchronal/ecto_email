@@ -2,7 +2,7 @@ defmodule EctoEmail do
   # @related [test](test/ecto_email_test.exs)
   @moduledoc """
   An `Ecto.Type` for email addresses, using the
-  [`:email_validator`](https://github.com/rbkmoney/email_validator) library
+  [`ex_email`](https://github.com/synchronal/ex_email) library
   for validations.
 
   ## Usage
@@ -96,7 +96,7 @@ defmodule EctoEmail do
   """
   @impl Ecto.Type
   def cast(address) when is_binary(address) do
-    if :email_validator.validate(address) == :ok do
+    if ExEmail.validate(address) == :ok do
       {:ok, address}
     else
       {:error, message: "malformed email address"}

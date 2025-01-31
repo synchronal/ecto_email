@@ -50,7 +50,7 @@ defmodule EctoEmail.MixProject do
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
       {:ecto_sql, "~> 3.10"},
       {:ecto_temp, "~> 2.0", only: :test},
-      {:email_validator, "~> 1.1", github: "sax/email_validator", branch: "project-plugins", override: true},
+      {:ex_email, "> 0.0.0"},
       {:ex_doc, "~> 0.34", only: :dev, runtime: false},
       {:mix_audit, "~> 2.1", only: [:dev, :test], runtime: false},
       {:postgrex, ">= 0.0.0"}
