@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.0.2
+
 - Require `ExEmail` version greater than or equal to v0.1.2.
 
 ## 3.0.1

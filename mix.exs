@@ -2,7 +2,7 @@ defmodule EctoEmail.MixProject do
   use Mix.Project
 
   @scm_url "https://github.com/synchronal/ecto_email"
-  @version "3.0.1"
+  @version "3.0.2"
 
   def application,
     do: [
