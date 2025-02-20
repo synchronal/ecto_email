@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Require `ExEmail` version greater than or equal to v0.1.2.
+
 ## 3.0.1
 
 - Replace `:email_validator` with `ExEmail`.
