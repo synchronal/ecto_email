@@ -1,4 +1,4 @@
-Copyright 2024 [synchronal.dev](https://github.com/synchronal)
+Copyright 2024-2025 [synchronal.dev](https://github.com/synchronal)
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
