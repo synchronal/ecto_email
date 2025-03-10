@@ -4,10 +4,11 @@
 [![Hex
 pm](http://img.shields.io/hexpm/v/ecto_date_time_range.svg?style=flat)](https://hex.pm/packages/ecto_date_time_range)
 
-This library provides an `Ecto.Type` in the guise of `EctoEmail`. When
-using a database column type interchangeable with `:string` such as
-`:text`, `:string`, or `:citext`, this type may be used in the schema
-module to provide automatic validation of inputs.
+An `Ecto.Type` for email addresses, using the
+[`ex_email`](https://github.com/synchronal/ex_email) library for
+validations. When using a database column type interchangeable with
+`:string` such as `:text`, `:string`, or `:citext`, this type may be
+used in the schema module to provide automatic validation of inputs.
 
 - Repo: <https://github.com/synchronal/ecto_email>
 - Hex docs: <https://hexdocs.pm/ecto_email>

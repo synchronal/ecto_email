@@ -7,7 +7,7 @@ defmodule EctoEmail do
 
   ## Usage
 
-  When creating an email field, the underline column  should be specified
+  When creating an email field, the underlying column should be specified
   as a `:string` or a `:text`.
 
   ### Migration
